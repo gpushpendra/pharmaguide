@@ -36,3 +36,31 @@
     transform: rotate(360deg);
   }
 }
+
+.card-box{
+  padding: 25px;
+}
+.board{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+  
+}
+.board-row{
+  padding: 10px;
+  width: 25%;
+  margin: 20px 0px 20px 0px;
+}
+
+.card-icon {
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
+  width: auto;
+  text-align: center;
+ }
+  .text {
+    padding: 3px 6px;
+
+  }
