@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 export default function Header(props) {
 
   return (
@@ -15,7 +16,7 @@ export default function Header(props) {
               <a className="nav-link active" aria-current="page" href="/">Home</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href='/Testin.js'>About Us</a>
+              <a className="nav-link" href='/about'>About Us</a>
             </li>
             {/* <li className="nav-item dropdown">
               <a className="nav-link dropdown-toggle" href="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -31,7 +32,7 @@ export default function Header(props) {
             </li>
           </ul>
               <button className="btn btn-outline-success-sm" type="submit">Log in</button>
-              <button className="btn btn-outline-success-sm" type="submit">Sign in</button>
+              <button className="btn btn-outline-success-sm" type="submit">Sign up</button>
 
         </div>
       </div>

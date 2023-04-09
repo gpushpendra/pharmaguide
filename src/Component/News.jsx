@@ -1,61 +1,24 @@
-import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
-const News = () => {
+import React, { Component } from "react";
+export class News extends Component{
+  render(){
+    let {title, description, imagUrl}=this.props;
   return (
     <div>
-      <div className="bg-light p-3">
-        <Container>
-          <Row>
-            <Col md={4}>
-              <div class="card">
-                <img src="..." class="card-img-top" alt="..." />
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                  <a href="/" class="btn btn-primary">
+      <div className="p-4">
+              <div ClassName="card">
+                <img src={imagUrl} ClassName="card-img-top" alt="..." />
+                <div ClassName="card-body">
+                  <h5 ClassName="card-title">{title}</h5>
+                  <p ClassName="card-text">{description}</p>
+                  <a href="/" ClassName="btn btn-primary">
                     Go somewhere
                   </a>
                 </div>
               </div>
-            </Col>
-            <Col md={4}>
-            <div class="card">
-                <img src="..." class="card-img-top" alt="..." />
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                  <a href="/" class="btn btn-primary">
-                    Go somewhere
-                  </a>
-                </div>
-              </div>
-            </Col>
-            <Col md={4}>
-            <div class="card">
-                <img src="..." class="card-img-top" alt="..." />
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                  <a href="/" class="btn btn-primary">
-                    Go somewhere
-                  </a>
-                </div>
-              </div>
-            </Col>
-          </Row>
-        </Container>
       </div>
     </div>
   );
+  }
 };
 
 export default News;
