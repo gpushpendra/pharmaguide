@@ -4,7 +4,7 @@ import React from 'react'
 export default function Header(props) {
 
   return (
-    <nav className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}`}>
+    <nav className={`navbar navbar-expand-lg navbar-${props.mode} bg-primary`}>
       <div className="container-fluid">
         <a className="navbar-brand" href="/">{props.title}</a>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,8 +31,8 @@ export default function Header(props) {
             <li className="nav-item">
             </li>
           </ul>
-              <button className="btn btn-outline-success-sm" type="submit">Log in</button>
-              <button className="btn btn-outline-success-sm" type="submit">Sign up</button>
+          <a className="nav-link" href='/Login'><button className="btn btn-outline-success-sm" type="submit">Log in</button></a>
+          <a className="nav-link" href='/Signup'><button className="btn btn-outline-success-sm" type="submit">Sign up</button></a>
 
         </div>
       </div>
