@@ -1,56 +1,82 @@
-import React from 'react';
-import axios from 'axios';
-import SearchBar from '../Component/SearchBar';
+import { Container, Row, Col } from "react-bootstrap";
+import SearchBar from "../Component/SearchBar";
 
-class DrugInfo extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      drugInfo: null,
-      error: null,
-    };
-  }
+const MedicineCompare = () => {
 
-  componentDidMount() {
-    const options = {
-      method: 'GET',
-      url: 'https://drug-info-and-price-history.p.rapidapi.com/1/druginfo',
-      params: {drug: 'advil'},
-      headers: {
-        'X-RapidAPI-Key': '4fd660d289msh63b67201ed3a818p185564jsnb5cd3f16dcc6',
-        'X-RapidAPI-Host': 'drug-info-and-price-history.p.rapidapi.com'
-      }
-    };
+  return (
+    <>
+      <SearchBar />
 
-    axios.request(options)
-      .then(response => {
-        this.setState({ drugInfo: response.data });
-      })
-      .catch(error => {
-        this.setState({ error });
-      });
-  }
+      <Container>
+        <Row>
+          {/* {this.state.articals.map{(element)=> {console.log(element)}}} */}
 
-  render() {
-    <SearchBar/>
-    const { drugInfo, error } = this.state;
+          <Col>
+            <table className="table table-bordered">
+              <thead className="headBg">
+                <tr>
+                  <th scope="col">Handle</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>@mdo</td>
+                </tr>
+                <tr>
+                  <td>@fat</td>
+                </tr>
+                <tr>
+                  <td>@twitter</td>
+                </tr>
+              </tbody>
+            </table>
+          </Col>
 
-    if (error) {
-      return <div>Error: {error.message}</div>;
-    } else if (!drugInfo) {
-      return <div>Loading...</div>;
-    } else {
-      return (
-        <div>
-          <h1>Drug Information</h1>
-          <p>Drug Name: {drugInfo.drug_name}</p>
-          <p>Active Ingredient: {drugInfo.active_ingredient}</p>
-          <p>Manufacturer: {drugInfo.manufacturer}</p>
-          {/* Add more data here */}
-        </div>
-      );
-    }
-  }
-}
+          <Col>
+            <table className="table">
+              <thead className="headBg">
+                <tr>
+                  <th scope="col">Handle</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>@mdo</td>
+                </tr>
+                <tr>
+                  <td>@fat</td>
+                </tr>
+                <tr>
+                  <td>@twitter</td>
+                </tr>
+              </tbody>
+            </table>
+          </Col>
+          <div className="w-25">
+            <Col>
+              <table className="table table-bordered">
+                <thead className="headBg">
+                  <tr>
+                    <th scope="col" >
+                      First
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Otto</td>
+                  </tr>
+                  <tr>
+                    <td>Thornton</td>
+                  </tr>
+                </tbody>
+              </table>
+            </Col>
+          </div>
+        </Row>
+      </Container>
+    </>
+  );
+};
 
-export default DrugInfo;
+export default MedicineCompare;

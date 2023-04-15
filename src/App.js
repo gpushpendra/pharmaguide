@@ -7,6 +7,7 @@ import MedicineCompare from "./Pages/MedicineCompare";
 import Login from "./Pages/Auth/Login";
 import Signup from "./Pages/Auth/Signup";
 import Dashboard from "./Component/Dashboard";
+import MyList from "./Pages/MyList/MyList";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route  path="/login" element={<Login />}></Route>
           <Route  path="/signup" element={<Signup />}></Route>
           <Route  path="/MedicineCompare" element={<MedicineCompare />}></Route>
+          <Route  path="/MyList" element={<MyList />}></Route>
 
 
 

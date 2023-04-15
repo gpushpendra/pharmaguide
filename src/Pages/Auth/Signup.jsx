@@ -17,8 +17,8 @@ function Signup() {
   };
 
   return (
-    <div className="container mt-5 w-50 p-5 bg-light">
-      <h1 className="mb-4">Signup</h1>
+    <div className="container mt-5 w-50 p-5 cardcolor">
+      <h1 className="mb-4 text-dark">Signup</h1>
       {showPasswordError && (
         <Alert variant="danger" onClose={() => setShowPasswordError(false)} dismissible>
           Passwords do not match.
@@ -28,7 +28,7 @@ function Signup() {
         <Form.Group controlId="email" className='p-2'>
           <Form.Label>Email address</Form.Label>
           <Form.Control type="email" placeholder="Enter email" value={email} onChange={(e) => setEmail(e.target.value)} required />
-          <Form.Text className="text-muted">We'll never share your email with anyone else.</Form.Text>
+          <Form.Text className="text-primary">We'll never share your email with anyone else.</Form.Text>
         </Form.Group>
        
         <Form.Group controlId="password" className='p-2'>
@@ -41,7 +41,7 @@ function Signup() {
           <Form.Control type="password" placeholder="Confirm Password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} required />
         </Form.Group>
 
-        <Button variant="primary" type="submit" mt-2>Signup</Button>
+        <Button variant="dark mt-3" type="submit" >Signup</Button>
       </Form>
       <div className="mt-4 p-1">
         <span>Already have an account? </span>

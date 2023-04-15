@@ -32,22 +32,25 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
 
-.card-box{
+.card-box {
   padding: 25px;
 }
-.board{
+
+.board {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  
-  
+
+
 }
-.board-row{
+
+.board-row {
   padding: 10px;
   width: 25%;
   margin: 20px 0px 20px 0px;
@@ -56,11 +59,37 @@
 .card-icon {
   padding: 20px;
   border-radius: 20px;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
   width: auto;
   text-align: center;
- }
-  .text {
-    padding: 3px 6px;
+}
 
-  }
+.text {
+  padding: 3px 6px;
+
+}
+.headBg{
+  background-color: rgb(13, 53, 102);
+  color: white;
+  padding: 3px;
+}
+.table {
+  width: auto;
+  justify-content: center;
+
+}
+
+.footer{
+  background-color: rgb(70,70,70);
+  color: white;
+  padding: 25px 5px 15px 5px;
+}
+
+
+.cardcolor{
+  background-color: white;
+  color: rbg(32,33,36);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+
+}
+
